@@ -1,14 +1,15 @@
-package com.example.microService_1.controller;
+package com.example.microService_2.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/service1")
+@RequestMapping("/service2")
 public class Controller {
     @GetMapping("/hello")
     public String hello(){
-        return "Hello from Service 1";
+        return "Hello from Service 2";
     }
+
 }

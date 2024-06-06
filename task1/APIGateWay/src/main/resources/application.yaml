@@ -1,0 +1,22 @@
+server:
+  port: 8765
+
+
+spring:
+  application:
+    name: ApiGateWay
+  cloud:
+    gateway:
+      routes:
+        - id: microService_1
+          uri: http://localhost:8091
+          predicates:
+            - Path=/service1/**
+        - id: microService_2
+          uri: http://localhost:8092
+          predicates:
+            - Path=/service2/**
+
+
+
+
